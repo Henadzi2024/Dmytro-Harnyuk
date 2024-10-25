@@ -1,1 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты - Пастор Дмитрий Гарнюк</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        header, footer {
+            background-color: #ffcc33;
+            color: #0057b7;
+            text-align: center;
+            padding: 1em 0;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .back-link {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 1em;
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Контакты</h1>
+    </header>
+    <a href="index.html" class="back-link">Вернуться на главную</a>
+    <div class="container">
+        <p>Адрес: Париж, Франция</p>
+        <p>Электронная почта: <a href="mailto:dmytro@example.com">dmytro@example.com</a></p> <!-- Пример ссылки на email -->
+        <p>Социальные сети:</p>
+        <ul>
+            <li><a href="https://www.facebook.com/ludiistiny" target="_blank">Facebook</a></li>
+            <li><a href="https://www.instagram.com/dmytro" target="_blank">Instagram</a></li>
+            <li><a href="https://www.youtube.com/@PeopleDeLaVerité" target="_blank">YouTube канал церкви</a></li>
+        </ul>
+        <p>Полезные ссылки:</p>
+        <ul>
+            <li><a href="https://henadzi2024.github.io/Zoya-Izokh/" target="_blank">Сайт пастора Zoya Izokh</a></li>
+        </ul>
+    </div>
+
+    <!-- Кнопка "Вверх" -->
+    <style>
+        #back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #ffcc33;
+            color: #0057b7;
+            padding: 10px;
+            border-radius: 50%;
+            text-align: center;
+            cursor: pointer;
+            font-size: 18px;
+            display: none;
+        }
+    </style>
+
+    <div id="back-to-top" onclick="scrollToTop()">↑</div>
+
+    <script>
+        window.onscroll = function() {
+            var button = document.getElementById("back-to-top");
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                button.style.display = "block";
+            } else {
+                button.style.display = "none";
+            }
+        };
+
+        function scrollToTop() {
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        }
+    </script>
+
+    <footer>
+        <p>&copy; 2024 Пастор Дмитрий Гарнюк. Все права защищены.</p>
+    </footer>
+
+</body>
+</html>
 
