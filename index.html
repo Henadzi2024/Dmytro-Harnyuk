@@ -2,44 +2,130 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Пастор Дмитрий Гарнюк</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f2f2f2;
+            background-color: #f2f2f2; /* Светлый фон */
             color: #333;
             line-height: 1.6;
             margin: 0;
             padding: 0;
         }
+        header {
+            background-color: #ffcc33; /* Желтый цвет украинского флага */
+            padding: 1em 0;
+            text-align: center;
+        }
         h1 {
             color: #0057b7; /* Синий цвет украинского флага */
             font-size: 2em;
+            margin: 0;
+        }
+        nav {
+            margin-top: 1em;
             text-align: center;
-            margin-top: 0.5em;
+        }
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            padding: 10px 15px;
+            background-color: #ffffff;
+            border-radius: 5px;
+        }
+        nav a:hover {
+            background-color: #ffcc33;
+            color: #0057b7;
         }
         .content {
             max-width: 900px;
-            margin: auto;
+            margin: 20px auto;
             padding: 20px;
-            background-color: #ffdd00; /* Желтый цвет украинского флага */
+            background-color: #ffffff;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
         }
-        p {
+        .content img {
+            width: 90%;
+            max-width: 900px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            border-radius: 8px;
+        }
+        .img-description {
+            margin-top: 10px;
             font-size: 1.1em;
-            text-align: justify;
-            padding: 1em;
+            color: #555;
+        }
+        .back-to-main {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .back-to-main a {
+            text-decoration: none;
+            font-size: 1.2em;
+            color: #333;
+            background-color: #ffffff;
+            border-radius: 5px;
+            padding: 10px 15px;
+        }
+        .back-to-main a:hover {
+            background-color: #ffcc33;
+            color: #0057b7;
+        }
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #ffcc33;
+            color: white;
+            padding: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+            text-align: center;
+            font-size: 18px;
+            display: none;
         }
     </style>
 </head>
 <body>
     <header>
         <h1>Пастор Дмитрий Гарнюк</h1>
+        <nav>
+            <a href="experience.html">Опыт и проекты</a>
+            <a href="services.html">Служение</a>
+            <a href="contacts.html">Контакты</a>
+        </nav>
     </header>
     <div class="content">
-        <p>Добро пожаловать на персональную страницу пастора Дмитрия! Здесь его служение, планы, профессиональная деятельность.</p>
+        <p class="img-description">Добро пожаловать на персональную страницу пастора Дмитрия! Здесь его служение, планы, профессиональная деятельность.</p>
         <p>Посетите <a href="https://www.youtube.com/@user-ui1cf2gs2b" target="_blank">YouTube-канал церкви "Люди Истины"</a> для проповедей и духовного вдохновения.</p>
     </div>
+
+    <div class="back-to-main">
+        <a href="index.html">Вернуться на главную</a>
+    </div>
+
+    <div id="back-to-top" class="back-to-top" onclick="scrollToTop()">↑ Наверх</div>
+
+    <script>
+        window.onscroll = function() {
+            var button = document.getElementById("back-to-top");
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                button.style.display = "block";
+            } else {
+                button.style.display = "none";
+            }
+        };
+
+        function scrollToTop() {
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        }
+    </script>
 </body>
 </html>
